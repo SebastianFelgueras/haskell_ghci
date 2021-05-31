@@ -1,5 +1,5 @@
 [package]
-name = "haskell_ghci_parser"
+name = "haskell_ghci"
 version = "0.1.0"
 authors = ["Sebastián Felgueras <sebastian.felgueras@gmail.com>"]
 edition = "2018"
