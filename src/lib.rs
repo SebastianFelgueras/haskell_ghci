@@ -8,6 +8,9 @@ use std::{
     thread,
     sync::{Mutex,Arc}
 };
+
+pub mod misc;
+
 #[cfg(target_os = "windows")]
 const NOMBREGHCI: &str = "ghci.exe";
 #[cfg(target_os = "macos")]
