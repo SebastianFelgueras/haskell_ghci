@@ -24,6 +24,6 @@ pub fn haskell_vec_a_vec<T: std::str::FromStr>(haskell_vec: String)->Result<Vec<
     Ok(vector)
 }
 
-pub fn tupla_a_haskell_tupla<T: Display,R: Display>(tupla: (T,R))->String{
+pub fn tupla_a_haskell_tupla<T: Display,R: Display>(tupla: &(T,R))->String{
     format!("({},{})",tupla.0,tupla.1)
 }
