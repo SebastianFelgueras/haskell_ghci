@@ -27,3 +27,11 @@ pub fn haskell_vec_a_vec<T: std::str::FromStr>(haskell_vec: String)->Result<Vec<
 pub fn tupla_a_haskell_tupla<T: Display,R: Display>(tupla: &(T,R))->String{
     format!("({},{})",tupla.0,tupla.1)
 }
+
+pub fn bool_a_haskell_bool(v:bool)->&'static str{
+    if v{
+        "True"
+    }else{
+        "False"
+    }
+}
