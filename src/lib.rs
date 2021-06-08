@@ -8,6 +8,9 @@ use std::{
     thread,
     sync::{Mutex,Arc}
 };
+
+pub mod misc;
+
 #[cfg(target_os = "windows")]
 const NOMBREGHCI: &str = "ghci.exe";
 #[cfg(target_os = "macos")]
@@ -149,7 +152,7 @@ impl HaskellGHCIParser{
         if t == output_esperada{
             Ok(Comparar::Iguales)
         }else{
-            Ok(Comparar::Diferentes(linea))
+            Ok(Comparar::Diferentes(Self::parsear_avanzar_linea(&linea)?))
         }
     }
     pub fn terminar(self){
