@@ -1,6 +1,7 @@
 use std::fmt::Display;
 
 pub fn vec_a_haskell_vec<T: Display>(vec:&Vec<T>)->String{
+    if vec.len() == 0{return "[]".to_string()}
     let mut vector = String::from("[");
     for elem in vec{
         vector.push_str(&format!("{}",elem));
